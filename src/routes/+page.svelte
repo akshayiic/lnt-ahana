@@ -6,6 +6,7 @@
 	import poweredByVretail from '$lib/images/powered-vretail.png';
 	import instructionIcon from '$lib/images/instruction-icon.svg';
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	const currentUI = getContext('currentUI');
 	const walkthroughDisabled = getContext('walkthroughDisabled');
 
@@ -24,6 +25,8 @@
 	let isIframe = inIframe();
 
 	onMount(async () => {
+		goto('/amenities', { replaceState: true });
+
 		function setElementHeight() {
 			const vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -63,49 +66,6 @@
 </svelte:head>
 
 <Home />
-
-{#if $UIPanel == 'loading'}
-	<div
-		class="absolute left-0 top-0 z-[2000000000] h-screen w-screen rounded bg-cover bg-center bg-no-repeat"
-	>
-		<div class="z-[2000000002] h-screen w-screen bg-gradient-to-t from-black">
-			<div
-				class="intro center absolute bottom-10 flex w-full flex-col items-center justify-center text-center font-semibold uppercase text-white"
-			>
-				<button
-					id="v-start-btn"
-					on:click={() => {
-						UIPanel.set('sign-up');
-						if (!(window.self !== window.top) && window.innerWidth < 1200) {
-							if (document.body.requestFullscreen) {
-								document.body.requestFullscreen();
-							} else if (document.body.webkitRequestFullscreen) {
-								/* Safari */
-								document.body.webkitRequestFullscreen();
-							} else if (document.body.msRequestFullscreen) {
-								/* IE11 */
-								document.body.msRequestFullscreen();
-							}
-						}
-
-						console.log('go fullscreen');
-					}}
-					class="bg-all-none !w-fit p-0"
-				>
-					<img id="v-start-img" style="width: 100px;" src="/start-btn.png" alt="" />
-				</button>
-
-				<div class="title text-2xl">virtual tour experience</div>
-				<div class="subtitle">by Narang</div>
-			</div>
-		</div>
-	</div>
-	<img
-		src={poweredByVretail}
-		alt="powered by vretail"
-		class="absolute bottom-5 right-6 z-[2000000002]"
-	/>
-{/if}
 {#if $UIPanel == 'instructions-exterior' && $currentUI.Exterior && $walkthroughDisabled}
 	<div class="centered-panel instruction-screen p-4">
 		<div class="left-panel--header mb-3 flex justify-between">
