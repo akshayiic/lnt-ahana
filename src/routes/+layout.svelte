@@ -118,10 +118,23 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clip-path="url(#clip0_323_2301)">
-        <path d="M251.999 151H341.999" stroke="#fff" stroke-width="12" stroke-linecap="round" />
+        <path
+          d="M251.999 151H341.999"
+          stroke="#fff"
+          stroke-width="12"
+          stroke-linecap="round"
+        />
         <circle cx="296.999" cy="457" r="12" fill="#fff" />
       </g>
-      <rect x="203.999" y="147" width="186" height="352" rx="12" stroke="#fff" stroke-width="8" />
+      <rect
+        x="203.999"
+        y="147"
+        width="186"
+        height="352"
+        rx="12"
+        stroke="#fff"
+        stroke-width="8"
+      />
       <path
         d="M343.449 618.795C341.64 617.527 341.2 615.033 342.467 613.224L363.116 583.734C364.383 581.925 366.877 581.485 368.687 582.752C370.496 584.019 370.936 586.513 369.669 588.323L351.314 614.536L377.527 632.89C379.337 634.157 379.777 636.651 378.51 638.461C377.243 640.271 374.748 640.71 372.939 639.443L343.449 618.795ZM581.096 274.468C580.713 272.292 582.165 270.218 584.341 269.834C586.517 269.451 588.591 270.903 588.975 273.079L581.096 274.468ZM345.049 611.579C421.054 598.177 488.623 555.131 532.891 491.91L539.444 496.499C493.959 561.458 424.533 605.687 346.438 619.457L346.438 619.457ZM532.891 491.91C577.158 428.69 594.498 350.474 581.096 274.468L588.975 273.079C602.745 351.174 584.928 431.54 539.444 496.499L532.891 491.91Z"
         fill="white"
@@ -132,7 +145,14 @@
       />
       <defs>
         <clipPath id="clip0_323_2301">
-          <rect x="203.999" y="147" width="186" height="352" rx="12" fill="white" />
+          <rect
+            x="203.999"
+            y="147"
+            width="186"
+            height="352"
+            rx="12"
+            fill="white"
+          />
         </clipPath>
       </defs>
     </svg>
@@ -141,7 +161,7 @@
     </p>
   </div>
 
-  {#if $page.url.pathname.includes('/interiors')}
+  {#if $page.url.pathname.includes("/interiors")}
     <img
       src={mainLogo}
       alt=""
@@ -159,7 +179,7 @@
       src={narang}
       alt=""
       id="naranglogo"
-      class="absolute right-3 lg:right-20 top-3 lg:top-[2.75rem] z-[200] rounded-lg bg-white p-1.5 lg:p-2 shadow-sm"
+      class="absolute right-3 lg:right-5 top-3 lg:top-5 z-[200] rounded-lg bg-white p-1.5 lg:p-2 shadow-sm"
     />
   {/if}
 
@@ -437,11 +457,11 @@
 
   @media (min-width: 1024px) {
     #mainlogo {
-      width: 10rem;
-      height: 10rem;
+      width: 7rem;
+      height: 7rem;
     }
     #naranglogo {
-      width: 10rem;
+      width: 7rem;
       height: auto;
     }
   }

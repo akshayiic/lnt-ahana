@@ -37,10 +37,15 @@
       "https://assets.vestate.io/webtool/narang/valora/brochure/amenities/Lounge%20300%2002.webp",
     "Yoga 300 01":
       "https://assets.vestate.io/webtool/narang/valora/brochure/amenities/Yoga%20300%2001.webp",
+    salon:
+      "https://assets.vestate.io/webtool/narang/valora/brochure/amenities/salon.webp",
+    outdoor_lawn:
+      "https://assets.vestate.io/webtool/narang/valora/brochure/amenities/outdoor_lawn.webp",
   };
 
   // Simple flat list of amenities
   const amenitiesList = [
+    { id: "outdoor_lawn", label: "Outdoor Lawn" },
     { id: "Badminton_Piclkleball court", label: "Badminton/Pickleball Court" },
     { id: "Banquet 300 01", label: "Banquet" },
     { id: "Bussines Center", label: "Business Center" },
@@ -51,6 +56,7 @@
     { id: "Lounge 300 01", label: "Lounge 1" },
     { id: "Lounge 300 02", label: "Lounge 2" },
     { id: "Yoga 300 01", label: "Yoga" },
+    { id: "salon", label: "Salon" },
   ];
 
   let currentImage = writable();
