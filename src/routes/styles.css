@@ -63,7 +63,6 @@
 }
 
 .inner-btn-group button {
-	background-color: white;
 	padding: 0.5rem 1rem !important;
 }
 
@@ -502,9 +501,8 @@ button {
 	text-align: center;
 }
 .inner-btn-group button {
-	background-color: white;
 	padding: 0.5rem 1rem !important;
-	width: 15rem;
+	width: 100%;
 	text-align: left;
 }
 .no-hovers.pt-3 .inner-btn-group {
@@ -666,6 +664,12 @@ button {
 	.inner-btn-group,
 	.left-title {
 		font-size: 0.765rem;
+		
+	}
+
+	.left-title-head{
+				font-size: 0.765rem;
+				white-space: nowrap;
 	}
 
 	.nav-wrapper button {
@@ -712,7 +716,12 @@ button {
 	button,
 	.inner-btn-group,
 	.left-title {
-		font-size: 0.765rem;
+		font-size: 0.765rem; 
+	}
+
+	.left-title-head{
+				font-size: 0.765rem;
+				white-space: nowrap;
 	}
 
 	.nav-wrapper button {

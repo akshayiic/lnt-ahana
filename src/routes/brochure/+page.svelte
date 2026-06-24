@@ -23,32 +23,29 @@
 </script>
 
 <div
-  class="user-select-none fixed left-0 right-0 top-5 z-[999] mb-2 flex items-center justify-center gap-3"
-  style="    background: white;
+  class="user-select-none fixed left-0 right-0 top-5 z-[999] mb-2 flex items-center justify-center gap-4"
+  style="background: white;
        width: fit-content;
        margin: auto;
-       padding: .7rem;
-       border-radius: 1rem;"
+       padding: .6rem 1rem;
+       border-radius: 1rem;
+       box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);"
 >
-  <div id="pdf-prev" class="grid w-fit grid-cols-1 gap-2">
-    <button
-      on:click={() => prevPage()}
-      class="primary-btn px-3 py-1"
-      disabled={$pageNumber == 1 ? true : false}>Previous</button
-    >
-  </div>
-  <span class="flex gap-2 text-xl font-bold"
-    ><span id="page_num">{$pageNumber}</span> /
+  <button
+    on:click={() => prevPage()}
+    class="primary-btn px-5 py-1.5 text-sm font-semibold min-w-[100px] text-center"
+    disabled={$pageNumber == 1 ? true : false}>Previous</button
+  >
+  <span class="flex items-center gap-1.5 text-lg font-bold text-gray-800"
+    ><span id="page_num">{$pageNumber}</span>
+    <span class="text-gray-400">/</span>
     <span id="page_count"> 51 </span>
-
-    <div id="pdf-next" class="ms-2 grid w-fit grid-cols-1 gap-2">
-      <button
-        on:click={() => nextPage()}
-        class="primary-btn px-4 py-1"
-        disabled={$pageNumber == 51 ? true : false}>Next</button
-      >
-    </div>
   </span>
+  <button
+    on:click={() => nextPage()}
+    class="primary-btn px-5 py-1.5 text-sm font-semibold min-w-[100px] text-center"
+    disabled={$pageNumber == 51 ? true : false}>Next</button
+  >
 </div>
 <div class="left-panel-wrapper !z-[99999999999999]">
   <div class="left-panel p-2">

@@ -144,7 +144,10 @@
   <div class="left-panel-wrapper">
     <div class="left-panel p-2">
       <div class="left-panel--header flex justify-between gap-[5rem]">
-        <div class="left-title flex items-center font-bold">
+        <div
+          class="left-title-head flex items-center font-bold"
+          style={{ "white-space": "nowrap" }}
+        >
           <svg
             class="mr-2"
             width="25"
@@ -251,8 +254,10 @@
   @media (max-width: 768px) {
     .left-panel-wrapper {
       top: 50%;
-      left: 10px;
       right: 10px;
+      left: auto;
+      width: calc(100% - 20px);
+      max-width: 220px;
       transform: translateY(-50%);
       max-height: 80vh;
     }

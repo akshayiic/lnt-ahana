@@ -196,7 +196,9 @@
       bottom: 75px;
       top: auto;
       left: 10px;
-      right: 10px;
+      right: auto;
+      width: calc(100% - 20px);
+      max-width: 220px;
       transform: none;
       max-height: 80vh;
     }
