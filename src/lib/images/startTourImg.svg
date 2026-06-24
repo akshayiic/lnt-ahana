@@ -1,0 +1,28 @@
+		<svg
+				id="start-tour-img"
+				width="47"
+				height="46"
+				viewBox="0 0 47 46"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<circle opacity="0.15" cx="23.6113" cy="23.0068" r="22.6963" fill="white" />
+				<circle cx="23.6111" cy="23.0071" r="16.8816" fill="white" />
+				<path
+					d="M28.7346 22.4444C29.1922 22.6798 29.1922 23.3341 28.7346 23.5695L20.3792 27.8679C19.8453 28.1425 19.2649 27.5886 19.5143 27.0425L21.2373 23.2698C21.3136 23.1029 21.3136 22.9111 21.2373 22.7441L19.5143 18.9714C19.2649 18.4253 19.8453 17.8714 20.3792 18.146L28.7346 22.4444Z"
+					fill="url(#paint0_linear_99_267)"
+				/>
+				<defs>
+					<linearGradient
+						id="paint0_linear_99_267"
+						x1="20.2666"
+						y1="17.3999"
+						x2="24.2452"
+						y2="27.0141"
+						gradientUnits="userSpaceOnUse"
+					>
+						<stop stop-color="#4434DD" />
+						<stop offset="1" stop-color="#8076EE" />
+					</linearGradient>
+				</defs>
+			</svg>

@@ -1,0 +1,16 @@
+{
+	"/": [
+		"src/routes/+page.ts",
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/amenities": [
+		"src/routes/+layout.ts"
+	],
+	"/brochure": [
+		"src/routes/+layout.ts"
+	],
+	"/interiors": [
+		"src/routes/+layout.ts"
+	]
+}

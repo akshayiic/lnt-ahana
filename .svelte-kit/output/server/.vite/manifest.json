@@ -1,0 +1,218 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "name": "internal",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js"
+    ]
+  },
+  "_client.js": {
+    "file": "chunks/client.js",
+    "name": "client",
+    "imports": [
+      "_exports.js"
+    ]
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js",
+    "name": "exports"
+  },
+  "_index-server.js": {
+    "file": "chunks/index-server.js",
+    "name": "index-server",
+    "imports": [
+      "_index2.js"
+    ]
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "name": "index",
+    "imports": [
+      "_index2.js"
+    ]
+  },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "name": "index"
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "name": "internal",
+    "imports": [
+      "_index2.js"
+    ]
+  },
+  "_minimize-icon.js": {
+    "file": "chunks/minimize-icon.js",
+    "name": "minimize-icon"
+  },
+  "_stores.js": {
+    "file": "chunks/stores.js",
+    "name": "stores",
+    "imports": [
+      "_index2.js",
+      "_client.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "name": "entries/fallbacks/error.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_stores.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "name": "index",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js",
+      "_exports.js",
+      "_index.js"
+    ]
+  },
+  "src/lib/images/NarangLogo.png": {
+    "file": "_app/immutable/assets/NarangLogo.BFFI2l6-.png",
+    "src": "src/lib/images/NarangLogo.png"
+  },
+  "src/lib/images/NaranhValora.png": {
+    "file": "_app/immutable/assets/NaranhValora.CLyjviMW.png",
+    "src": "src/lib/images/NaranhValora.png"
+  },
+  "src/lib/images/instruction-icon.svg": {
+    "file": "_app/immutable/assets/instruction-icon.CKx1OzW8.svg",
+    "src": "src/lib/images/instruction-icon.svg"
+  },
+  "src/routes/+layout.svelte": {
+    "file": "entries/pages/_layout.svelte.js",
+    "name": "entries/pages/_layout.svelte",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_client.js",
+      "_stores.js",
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.Aftrp9Kh.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/NarangLogo.BFFI2l6-.png",
+      "_app/immutable/assets/NaranhValora.CLyjviMW.png"
+    ]
+  },
+  "src/routes/+layout.ts": {
+    "file": "entries/pages/_layout.ts.js",
+    "name": "entries/pages/_layout.ts",
+    "src": "src/routes/+layout.ts",
+    "isEntry": true
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "name": "entries/pages/_page.svelte",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_index.js",
+      "_minimize-icon.js",
+      "_client.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.CoP1LS3_.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/instruction-icon.CKx1OzW8.svg"
+    ]
+  },
+  "src/routes/+page.ts": {
+    "file": "entries/pages/_page.ts.js",
+    "name": "entries/pages/_page.ts",
+    "src": "src/routes/+page.ts",
+    "isEntry": true
+  },
+  "src/routes/access/+page.svelte": {
+    "file": "entries/pages/access/_page.svelte.js",
+    "name": "entries/pages/access/_page.svelte",
+    "src": "src/routes/access/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_index.js"
+    ]
+  },
+  "src/routes/amenities/+page.svelte": {
+    "file": "entries/pages/amenities/_page.svelte.js",
+    "name": "entries/pages/amenities/_page.svelte",
+    "src": "src/routes/amenities/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_index-server.js",
+      "_minimize-icon.js",
+      "_client.js",
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.B_wQpwiy.css"
+    ]
+  },
+  "src/routes/brochure/+page.svelte": {
+    "file": "entries/pages/brochure/_page.svelte.js",
+    "name": "entries/pages/brochure/_page.svelte",
+    "src": "src/routes/brochure/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_index.js",
+      "_minimize-icon.js"
+    ]
+  },
+  "src/routes/highlights/+page.svelte": {
+    "file": "entries/pages/highlights/_page.svelte.js",
+    "name": "entries/pages/highlights/_page.svelte",
+    "src": "src/routes/highlights/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.BSiIiwK_.css"
+    ]
+  },
+  "src/routes/interiors/+page.svelte": {
+    "file": "entries/pages/interiors/_page.svelte.js",
+    "name": "entries/pages/interiors/_page.svelte",
+    "src": "src/routes/interiors/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_index-server.js",
+      "_minimize-icon.js",
+      "_client.js",
+      "_index.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.ml4Mvnt9.css"
+    ]
+  },
+  "src/routes/vicinities/+page.svelte": {
+    "file": "entries/pages/vicinities/_page.svelte.js",
+    "name": "entries/pages/vicinities/_page.svelte",
+    "src": "src/routes/vicinities/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index2.js",
+      "_minimize-icon.js",
+      "_index.js",
+      "_index-server.js"
+    ]
+  }
+}

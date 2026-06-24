@@ -1,0 +1,38 @@
+	<svg
+				class="touch-point-2"
+				width="70"
+				height="70"
+				style="rotate: 152deg;"
+				id="podium-lawn-explore"
+				viewBox="0 0 70 70"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<circle
+					class="animate-pulsate delay-200"
+					opacity="0.15"
+					cx="34.802"
+					cy="34.7029"
+					r="34.3323"
+					id="go-lawn-circle"
+					fill="black"
+				/>
+				<circle id="go-lawn-circle2" cx="34.8022" cy="34.7031" r="26.4673" fill="white" />
+				<path
+					d="M45.6668 33.2526C46.5799 33.7224 46.5799 35.0278 45.6668 35.4975L28.9955 44.0738C27.9303 44.6218 26.7723 43.5167 27.2699 42.427L30.7078 34.8995C30.8599 34.5664 30.8599 34.1837 30.7078 33.8507L27.2699 26.3231C26.7723 25.2335 27.9303 24.1283 28.9955 24.6763L45.6668 33.2526Z"
+					fill="url(#paint0_linear_67_753)"
+				/>
+				<defs>
+					<linearGradient
+						id="paint0_linear_67_753"
+						x1="28.7709"
+						y1="23.1875"
+						x2="36.7092"
+						y2="42.3704"
+						gradientUnits="userSpaceOnUse"
+					>
+						<stop stop-color="#4434DD" />
+						<stop offset="1" stop-color="#8076EE" />
+					</linearGradient>
+				</defs>
+			</svg>
