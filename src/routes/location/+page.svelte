@@ -25,3 +25,19 @@
     </div>
   {/if}
 </div>
+
+<style>
+  .overview-image-wrapper {
+    background: #fff;
+    top: 60px;
+    height: calc(100% - 5rem - 50px);
+  }
+
+  .overview-static-image {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+</style>

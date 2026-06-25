@@ -43,7 +43,6 @@
 <style>
   .overview-image-wrapper {
     background: #fff;
-    margin-top: "50px";
   }
 
   .overview-static-image {
