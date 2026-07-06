@@ -69,7 +69,7 @@
 {#if $UIPanel == "loading"}
   <div
     class="absolute left-0 top-0 z-[2000000000] h-screen w-screen rounded bg-cover bg-center bg-no-repeat"
-    style="background-image: url('https://assets.vestate.io/lnt-ahana/brochure/overview/LOWANGLE%20HAVOC_1.webp');"
+    style="background-image: url('https://assets.vestate.io/lnt-ahana/amenities/main.png');"
   >
     <div class="z-[2000000002] h-screen w-screen bg-gradient-to-t from-black">
       <div
