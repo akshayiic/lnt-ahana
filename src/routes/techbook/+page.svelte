@@ -57,7 +57,7 @@
     <img
       class="mx-auto"
       style="width: auto; height: 100vh;"
-      src={"https://assets.vestate.io/webtool/narang/valora/brochure/brochure/assets/VTB-" +
+      src={"https://assets.vestate.io/lnt-ahana/brochure/brochure/assets/VTB-" +
         String($pageNumber).padStart(2, "0") +
         ".webp"}
       alt=""

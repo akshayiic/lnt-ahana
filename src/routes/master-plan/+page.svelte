@@ -16,19 +16,40 @@
 
   // Placeholder for master plan image source. Feel free to update this URL.
   let masterPlanImg =
-    "https://assets.vestate.io/webtool/narang/valora/brochure/floorPlan/assets/valora_site.jpeg";
+    "https://assets.vestate.io/lnt-ahana/interior/tower-a/2.jpg";
+
+  let isLoaded = true;
+  let activeSrc = "";
+  let prevSrc = "";
+  $: {
+    if (masterPlanImg && masterPlanImg !== activeSrc) {
+      prevSrc = activeSrc;
+      activeSrc = masterPlanImg;
+      isLoaded = false;
+    }
+  }
 </script>
 
 <svelte:head>
-  <title>Master Plan - V-Estate</title>
+  <title>Master Plan - L&T Ahana</title>
 </svelte:head>
 
 <div class="overview-image-wrapper">
-  {#if masterPlanImg}
+  {#if !isLoaded && prevSrc}
     <img
-      src={masterPlanImg}
+      src={prevSrc}
+      alt="Master Plan Previous"
+      class="overview-static-image absolute inset-0 filter blur-[8px] scale-105 pointer-events-none"
+    />
+  {/if}
+
+  {#if activeSrc}
+    <img
+      src={activeSrc}
       alt="Master Plan"
-      class="overview-static-image"
+      class="overview-static-image transition-opacity duration-300 {isLoaded ? 'opacity-100' : 'opacity-0'}"
+      on:load={() => { isLoaded = true; }}
+      on:error={() => { isLoaded = true; }}
       use:zoomable
     />
   {:else}

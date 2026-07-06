@@ -2,19 +2,40 @@
   import { zoomable } from "$lib/zoomable.js";
   // Placeholder for location image source. Feel free to update this URL.
   let locationImg =
-    "https://assets.vestate.io/webtool/narang/valora/brochure/floorPlan/assets/valora-map.jpg";
+    "https://assets.vestate.io/lnt-ahana/interior/tower-a/3.jpg";
+
+  let isLoaded = true;
+  let activeSrc = "";
+  let prevSrc = "";
+  $: {
+    if (locationImg && locationImg !== activeSrc) {
+      prevSrc = activeSrc;
+      activeSrc = locationImg;
+      isLoaded = false;
+    }
+  }
 </script>
 
 <svelte:head>
-  <title>Location - V-Estate</title>
+  <title>Location - L&T Ahana</title>
 </svelte:head>
 
 <div class="overview-image-wrapper">
-  {#if locationImg}
+  {#if !isLoaded && prevSrc}
     <img
-      src={locationImg}
+      src={prevSrc}
+      alt="Location Previous"
+      class="overview-static-image absolute inset-0 filter blur-[8px] scale-105 pointer-events-none"
+    />
+  {/if}
+
+  {#if activeSrc}
+    <img
+      src={activeSrc}
       alt="Location"
-      class="overview-static-image"
+      class="overview-static-image transition-opacity duration-300 {isLoaded ? 'opacity-100' : 'opacity-0'}"
+      on:load={() => { isLoaded = true; }}
+      on:error={() => { isLoaded = true; }}
       use:zoomable
     />
   {:else}

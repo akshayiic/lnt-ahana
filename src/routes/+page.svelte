@@ -60,8 +60,8 @@
 </script>
 
 <svelte:head>
-  <title>V-Estate</title>
-  <meta name="description" content="v-estate" />
+  <title>L&T Ahana</title>
+  <meta name="description" content="L&T Ahana" />
 </svelte:head>
 
 <Home />
@@ -69,7 +69,7 @@
 {#if $UIPanel == "loading"}
   <div
     class="absolute left-0 top-0 z-[2000000000] h-screen w-screen rounded bg-cover bg-center bg-no-repeat"
-    style="background-image: url('https://assets.vestate.io/webtool/narang/valora/brochure/overview/LOWANGLE%20HAVOC_1.webp');"
+    style="background-image: url('https://assets.vestate.io/lnt-ahana/brochure/overview/LOWANGLE%20HAVOC_1.webp');"
   >
     <div class="z-[2000000002] h-screen w-screen bg-gradient-to-t from-black">
       <div
@@ -109,7 +109,7 @@
         </button>
 
         <div class="title text-2xl">virtual tour experience</div>
-        <div class="subtitle">by Narang</div>
+        <div class="subtitle">by L&T</div>
       </div>
     </div>
   </div>
@@ -124,7 +124,7 @@
     <div class="left-panel--header mb-3 flex justify-between">
       <div class="left-title flex flex-col gap-1 text-left">
         <div class="text-2xl font-bold">Instructions</div>
-        See how to explore V-estate
+        See how to explore L&T Ahana
       </div>
       <button
         on:click={() => {

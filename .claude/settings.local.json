@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(cd:*)"
+      "Bash(cd:*)",
+      "Bash(git remote *)",
+      "Bash(git mv *)",
+      "Bash(npm run *)",
+      "Bash(npm install *)"
     ]
   }
 }
