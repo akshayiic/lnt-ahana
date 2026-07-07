@@ -100,10 +100,14 @@
   $: filteredFloorPlans = floorPlansList.filter((fp) => fp.tower === selectedTower);
 
   function selectTower(tower) {
-    selectedTower = tower;
-    const firstPlan = floorPlansList.find((fp) => fp.tower === tower);
-    if (firstPlan) {
-      $hotspotName = firstPlan.id;
+    if (selectedTower === tower) {
+      selectedTower = "";
+    } else {
+      selectedTower = tower;
+      const firstPlan = floorPlansList.find((fp) => fp.tower === tower);
+      if (firstPlan) {
+        $hotspotName = firstPlan.id;
+      }
     }
   }
 
@@ -144,10 +148,10 @@
 {#if !$ishighlights}
   <div class="left-panel-wrapper">
     <div class="left-panel p-2">
-      <div class="left-panel--header flex justify-between gap-[5rem]">
+      <div class="left-panel--header flex justify-between items-center gap-2">
         <div
           class="left-title-head flex items-center font-bold"
-          style={{ "white-space": "nowrap" }}
+          style="white-space: nowrap;"
         >
           <svg
             class="mr-2"
@@ -189,37 +193,81 @@
       </div>
 
       <div class={!$isInteriorsMinimized ? "block" : "hidden"}>
-        <!-- Tower Selector Tabs -->
-        <div class="flex gap-1 mb-2 border-b border-gray-200 pb-2">
-          <button
-            class="flex-1 py-1.5 px-2 text-center text-xs font-bold transition-all border-b-2"
-            style={selectedTower === "tower-a" ? "border-color: #630a38; color: #630a38;" : "border-color: transparent; color: #777;"}
-            on:click={() => selectTower("tower-a")}
-          >
-            Tower 1
-          </button>
-          <button
-            class="flex-1 py-1.5 px-2 text-center text-xs font-bold transition-all border-b-2"
-            style={selectedTower === "tower-b" ? "border-color: #630a38; color: #630a38;" : "border-color: transparent; color: #777;"}
-            on:click={() => selectTower("tower-b")}
-          >
-            Tower 2
-          </button>
-        </div>
-
-        <div class="pt-1 max-h-[50vh] overflow-y-auto pr-1">
-          <div class="inner-btn-group">
-            {#each filteredFloorPlans as floorPlan}
-              <button
-                class={$hotspotName == floorPlan.id
-                  ? "active inner-modal-btn "
-                  : "inner-modal-btn "}
-                id={floorPlan.id + "-fp"}
-                on:click={() => ($hotspotName = floorPlan.id)}
+        <div class="flex flex-col gap-1.5 mt-2">
+          <!-- Tower 1 (Tower A) Accordion -->
+          <div class="border border-gray-200 rounded-md overflow-hidden bg-white">
+            <button
+              class="w-full flex justify-between items-center py-1.5 px-2.5 text-left  font-bold transition-all bg-gray-50 hover:bg-gray-100"
+              style={selectedTower === "tower-a" ? "color: #630a38; border-left: 3px solid #630a38;" : "color: #777; border-left: 3px solid transparent;"}
+              on:click={() => selectTower("tower-a")}
+            >
+              <span>Tower 1</span>
+              <svg
+                class="w-3 h-3 transition-transform duration-200 {selectedTower === 'tower-a' ? 'rotate-180' : ''}"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                {floorPlan.label}
-              </button>
-            {/each}
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+
+            {#if selectedTower === "tower-a"}
+              <div class="p-1.5 pt-1 max-h-[35vh] overflow-y-auto">
+                <div class="inner-btn-group">
+                  {#each floorPlansList.filter((fp) => fp.tower === "tower-a") as floorPlan}
+                    <button
+                      class={$hotspotName == floorPlan.id
+                        ? "active inner-modal-btn"
+                        : "inner-modal-btn"}
+                      id={floorPlan.id + "-fp"}
+                      on:click={() => ($hotspotName = floorPlan.id)}
+                    >
+                      {floorPlan.label}
+                    </button>
+                  {/each}
+                </div>
+              </div>
+            {/if}
+          </div>
+
+          <!-- Tower 2 (Tower B) Accordion -->
+          <div class="border border-gray-200 rounded-md overflow-hidden bg-white">
+            <button
+              class="w-full flex justify-between items-center py-1.5 px-2.5 text-left font-bold transition-all bg-gray-50 hover:bg-gray-100"
+              style={selectedTower === "tower-b" ? "color: #630a38; border-left: 3px solid #630a38;" : "color: #777; border-left: 3px solid transparent;"}
+              on:click={() => selectTower("tower-b")}
+            >
+              <span>Tower 2</span>
+              <svg
+                class="w-3 h-3 transition-transform duration-200 {selectedTower === 'tower-b' ? 'rotate-180' : ''}"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+
+            {#if selectedTower === "tower-b"}
+              <div class="p-1.5 pt-1 max-h-[35vh] overflow-y-auto">
+                <div class="inner-btn-group">
+                  {#each floorPlansList.filter((fp) => fp.tower === "tower-b") as floorPlan}
+                    <button
+                      class={$hotspotName == floorPlan.id
+                        ? "active inner-modal-btn"
+                        : "inner-modal-btn"}
+                      id={floorPlan.id + "-fp"}
+                      on:click={() => ($hotspotName = floorPlan.id)}
+                    >
+                      {floorPlan.label}
+                    </button>
+                  {/each}
+                </div>
+              </div>
+            {/if}
           </div>
         </div>
       </div>
@@ -276,7 +324,7 @@
     transform: translateY(-50%);
     z-index: 2000000001;
     max-height: 90vh;
-    width: 280px;
+    width: 250px;
   }
 
   @media (max-width: 768px) {
@@ -285,7 +333,7 @@
       right: 10px;
       left: auto;
       width: calc(100% - 20px);
-      max-width: 220px;
+      max-width: 160px;
       transform: translateY(-50%);
       max-height: 80vh;
     }

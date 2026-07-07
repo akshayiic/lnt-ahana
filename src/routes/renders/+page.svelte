@@ -114,7 +114,7 @@
 {#if !$ishighlights}
   <div class="left-panel-wrapper">
     <div class="left-panel p-2">
-      <div class="left-panel--header flex justify-between gap-[5rem]">
+      <div class="left-panel--header flex justify-between items-center gap-2">
         <div class="left-title flex items-center font-bold">
           <svg
             class="mr-2"
@@ -153,8 +153,8 @@
             {#each amenitiesList as amenity}
               <button
                 class={$hotspotName == amenity.id
-                  ? "active inner-modal-btn "
-                  : "inner-modal-btn "}
+                  ? "active inner-modal-btn whitespace-normal text-left"
+                  : "inner-modal-btn whitespace-normal text-left"}
                 id={amenity.id + "-am"}
                 on:click={() => ($hotspotName = amenity.id)}
               >
@@ -215,6 +215,7 @@
     left: 20px;
     z-index: 2000000001;
     max-height: 90vh;
+    width: 250px;
   }
 
   @media (max-width: 768px) {
@@ -224,7 +225,7 @@
       left: 10px;
       right: auto;
       width: calc(100% - 20px);
-      max-width: 220px;
+      max-width: 160px;
       transform: none;
       max-height: 80vh;
     }

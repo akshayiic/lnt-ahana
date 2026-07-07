@@ -454,6 +454,10 @@
     width: 4rem;
     height: auto;
   }
+  #lntahanasublogo {
+    width: 5rem;
+    height: auto;
+  }
 
   @media (min-width: 1024px) {
     #lntahanalogo {
@@ -461,7 +465,7 @@
       height: auto;
     }
 
-    #lntahanasublogo{
+    #lntahanasublogo {
       width: 10%;
       height: auto;
     }
