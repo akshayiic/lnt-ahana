@@ -54,7 +54,6 @@
   const amenitiesList = [
     { id: "overview", label: "L&T Ahana" },
     { id: "Main Entrance", label: "Main Entrance 1" },
-    { id: "Main Entrance 2", label: "Main Entrance 2" },
     { id: "Tower A Dropoff", label: "Tower A Dropoff" },
     { id: "Dropoff Area", label: "Dropoff Area" },
     { id: "Retail Area", label: "Retail Area" },
