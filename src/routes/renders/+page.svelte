@@ -247,14 +247,14 @@
     width: 250px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     .left-panel-wrapper {
       bottom: 75px;
       top: auto;
       left: 10px;
       right: auto;
       width: calc(100% - 20px);
-      max-width: 160px;
+      max-width: 180px;
       transform: none;
       max-height: 80vh;
     }

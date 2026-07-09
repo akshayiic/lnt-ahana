@@ -83,17 +83,14 @@
   let activeSrc = "";
   let prevSrc = "";
   let pageNumber = 1;
+  let imgEl;
 
   $: displaySrc = $currentImage || floorPlanImages[floorPlansList[0].id];
   $: {
     if (displaySrc && displaySrc !== activeSrc) {
       prevSrc = activeSrc;
       activeSrc = displaySrc;
-      if (prevSrc) {
-        isLoaded = false;
-      } else {
-        isLoaded = true;
-      }
+      isLoaded = false;
     }
   }
 
@@ -164,6 +161,13 @@
     const initialImage = floorPlanImages[$hotspotName];
     if (initialImage) {
       currentImage.set(initialImage);
+    }
+
+    // On a hard refresh the prerendered <img> may finish loading before
+    // hydration attaches on:load, so the event is missed and the image
+    // stays at opacity-0 — check .complete to recover.
+    if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+      isLoaded = true;
     }
   });
 
@@ -294,10 +298,10 @@
   {/if}
 
   <img
+    bind:this={imgEl}
     src={activeSrc}
     alt="Floor Plan"
-    class="floor-plans-static-image transition-opacity duration-300 mx-auto {isLoaded ? 'opacity-100' : 'opacity-0'}"
-    style="width: auto; height: 100vh; max-width: 100%; max-height: 100vh; object-fit: contain;"
+    class="floor-plans-static-image transition-opacity duration-300 {isLoaded ? 'opacity-100' : 'opacity-0'}"
     on:load={() => { isLoaded = true; }}
     on:error={() => { isLoaded = true; }}
     use:zoomable
@@ -315,13 +319,13 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     overflow: hidden;
   }
 
   .floor-plans-static-image {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
   }
 
