@@ -2,7 +2,7 @@
   import { zoomable } from "$lib/zoomable.js";
   // Placeholder for location image source. Feel free to update this URL.
   let locationImg =
-    "https://assets.vestate.io/lnt-ahana/interior/tower-a/3.jpg";
+    "https://assets.vestate.io/lnt-ahana/interior/map.jpg";
 
   let isLoaded = true;
   let activeSrc = "";

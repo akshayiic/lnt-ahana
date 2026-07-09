@@ -1,19 +1,14 @@
 <script>
   import { getContext, onDestroy } from "svelte";
   import { zoomable } from "$lib/zoomable.js";
+  import { writable } from "svelte/store";
   import minimizeBtn from "$lib/images/minimize-icon.svg";
   import maximizeBtn from "$lib/images/maximize-icon.svg";
-  import { page } from "$app/stores";
-  import { setContext } from "svelte";
-  import { writable } from "svelte/store";
   let hotspotName = getContext("hotspotName");
-  import { goto } from "$app/navigation";
   let unsubscribeHotSpot;
   import { onMount } from "svelte";
-  const isInteriorsMinimized = writable();
+  const isInteriorsMinimized = writable(false);
   const ishighlights = writable();
-  setContext("isInteriorsMinimized", isInteriorsMinimized);
-  $: isInteriorsMinimized.set(false);
   $ishighlights = false;
 
   // Static images mapping for floor plans - using remote images
@@ -87,26 +82,62 @@
   let isLoaded = true;
   let activeSrc = "";
   let prevSrc = "";
+  let pageNumber = 1;
 
   $: displaySrc = $currentImage || floorPlanImages[floorPlansList[0].id];
   $: {
     if (displaySrc && displaySrc !== activeSrc) {
       prevSrc = activeSrc;
       activeSrc = displaySrc;
-      isLoaded = false;
+      if (prevSrc) {
+        isLoaded = false;
+      } else {
+        isLoaded = true;
+      }
     }
   }
 
   $: filteredFloorPlans = floorPlansList.filter((fp) => fp.tower === selectedTower);
 
-  function selectTower(tower) {
-    if (selectedTower === tower) {
-      selectedTower = "";
-    } else {
-      selectedTower = tower;
-      const firstPlan = floorPlansList.find((fp) => fp.tower === tower);
-      if (firstPlan) {
-        $hotspotName = firstPlan.id;
+  // Sync selectedTower and pageNumber with $hotspotName
+  $: {
+    const currentPlanId = $hotspotName;
+    const matchedPlan = floorPlansList.find((fp) => fp.id === currentPlanId);
+    if (matchedPlan) {
+      if (selectedTower !== matchedPlan.tower) {
+        selectedTower = matchedPlan.tower;
+      }
+      const index = floorPlansList
+        .filter((fp) => fp.tower === matchedPlan.tower)
+        .findIndex((fp) => fp.id === currentPlanId);
+      if (index !== -1) {
+        pageNumber = index + 1;
+      }
+    }
+  }
+
+  function handleTowerChange() {
+    const firstPlan = floorPlansList.find((fp) => fp.tower === selectedTower);
+    if (firstPlan) {
+      $hotspotName = firstPlan.id;
+      pageNumber = 1;
+    }
+  }
+
+  function nextPage() {
+    if (pageNumber < filteredFloorPlans.length) {
+      const nextPlan = filteredFloorPlans[pageNumber];
+      if (nextPlan) {
+        $hotspotName = nextPlan.id;
+      }
+    }
+  }
+
+  function prevPage() {
+    if (pageNumber > 1) {
+      const prevPlan = filteredFloorPlans[pageNumber - 2];
+      if (prevPlan) {
+        $hotspotName = prevPlan.id;
       }
     }
   }
@@ -125,10 +156,6 @@
         if (imagePath) {
           currentImage.set(imagePath);
           console.log("Displaying image:", imagePath);
-          const matchedPlan = floorPlansList.find((fp) => fp.id === changedHotspot);
-          if (matchedPlan && matchedPlan.tower !== selectedTower) {
-            selectedTower = matchedPlan.tower;
-          }
         }
       }
     });
@@ -146,6 +173,7 @@
 </script>
 
 {#if !$ishighlights}
+  <!-- Left Bottom Control Panel -->
   <div class="left-panel-wrapper">
     <div class="left-panel p-2">
       <div class="left-panel--header flex justify-between items-center gap-2">
@@ -193,85 +221,65 @@
       </div>
 
       <div class={!$isInteriorsMinimized ? "block" : "hidden"}>
-        <div class="flex flex-col gap-1.5 mt-2">
-          <!-- Tower 1 (Tower A) Accordion -->
-          <div class="border border-gray-200 rounded-md overflow-hidden bg-white">
+        <div class="pt-3">
+          <div class="inner-btn-group flex flex-col gap-1">
             <button
-              class="w-full flex justify-between items-center py-1.5 px-2.5 text-left  font-bold transition-all bg-gray-50 hover:bg-gray-100"
-              style={selectedTower === "tower-a" ? "color: #630a38; border-left: 3px solid #630a38;" : "color: #777; border-left: 3px solid transparent;"}
-              on:click={() => selectTower("tower-a")}
+              class={selectedTower === "tower-a" ? "active inner-modal-btn" : "inner-modal-btn"}
+              on:click={() => {
+                selectedTower = "tower-a";
+                handleTowerChange();
+              }}
             >
-              <span>Tower 1</span>
-              <svg
-                class="w-3 h-3 transition-transform duration-200 {selectedTower === 'tower-a' ? 'rotate-180' : ''}"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-              </svg>
+              Tower A
             </button>
-
-            {#if selectedTower === "tower-a"}
-              <div class="p-1.5 pt-1 max-h-[35vh] overflow-y-auto">
-                <div class="inner-btn-group">
-                  {#each floorPlansList.filter((fp) => fp.tower === "tower-a") as floorPlan}
-                    <button
-                      class={$hotspotName == floorPlan.id
-                        ? "active inner-modal-btn"
-                        : "inner-modal-btn"}
-                      id={floorPlan.id + "-fp"}
-                      on:click={() => ($hotspotName = floorPlan.id)}
-                    >
-                      {floorPlan.label}
-                    </button>
-                  {/each}
-                </div>
-              </div>
-            {/if}
-          </div>
-
-          <!-- Tower 2 (Tower B) Accordion -->
-          <div class="border border-gray-200 rounded-md overflow-hidden bg-white">
             <button
-              class="w-full flex justify-between items-center py-1.5 px-2.5 text-left font-bold transition-all bg-gray-50 hover:bg-gray-100"
-              style={selectedTower === "tower-b" ? "color: #630a38; border-left: 3px solid #630a38;" : "color: #777; border-left: 3px solid transparent;"}
-              on:click={() => selectTower("tower-b")}
+              class={selectedTower === "tower-b" ? "active inner-modal-btn" : "inner-modal-btn"}
+              on:click={() => {
+                selectedTower = "tower-b";
+                handleTowerChange();
+              }}
             >
-              <span>Tower 2</span>
-              <svg
-                class="w-3 h-3 transition-transform duration-200 {selectedTower === 'tower-b' ? 'rotate-180' : ''}"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-              </svg>
+              Tower B
             </button>
-
-            {#if selectedTower === "tower-b"}
-              <div class="p-1.5 pt-1 max-h-[35vh] overflow-y-auto">
-                <div class="inner-btn-group">
-                  {#each floorPlansList.filter((fp) => fp.tower === "tower-b") as floorPlan}
-                    <button
-                      class={$hotspotName == floorPlan.id
-                        ? "active inner-modal-btn"
-                        : "inner-modal-btn"}
-                      id={floorPlan.id + "-fp"}
-                      on:click={() => ($hotspotName = floorPlan.id)}
-                    >
-                      {floorPlan.label}
-                    </button>
-                  {/each}
-                </div>
-              </div>
-            {/if}
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Top Image Changer -->
+  <div
+    class="user-select-none fixed left-2 right-auto lg:left-0 lg:right-0 mx-0 lg:mx-auto top-3 lg:top-5 z-[999] ml-0 lg:ml-[4rem] mb-2 flex items-center justify-center gap-1 lg:gap-4 py-1 px-1.5 lg:py-2.5 lg:px-4"
+    style="background: white;
+         width: fit-content;
+         border-radius: 1rem;
+         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);"
+  >
+    <!-- Previous Button -->
+    <button
+      on:click={prevPage}
+      class="primary-btn px-2 py-0.5 text-[10px] font-semibold min-w-[55px] lg:px-5 lg:py-1.5 lg:text-sm lg:min-w-[100px] flex items-center justify-center text-center disabled:opacity-50 disabled:pointer-events-none transition-all"
+      disabled={pageNumber === 1}
+    >
+      <span class="hidden lg:inline">Previous</span>
+      <span class="inline lg:hidden">Prev</span>
+    </button>
+
+    <!-- Page Indicator -->
+    <span class="flex items-center gap-0.5 text-xs font-bold text-gray-800 min-w-[45px] lg:gap-1.5 lg:text-lg lg:min-w-[60px] justify-center"
+      ><span id="page_num">{pageNumber}</span>
+      <span class="text-gray-400">/</span>
+      <span id="page_count"> {filteredFloorPlans.length} </span>
+    </span>
+
+    <!-- Next Button -->
+    <button
+      on:click={nextPage}
+      class="primary-btn px-2 py-0.5 text-[10px] font-semibold min-w-[55px] lg:px-5 lg:py-1.5 lg:text-sm lg:min-w-[100px] flex items-center justify-center text-center disabled:opacity-50 disabled:pointer-events-none transition-all"
+      disabled={pageNumber === filteredFloorPlans.length}
+    >
+      Next
+    </button>
   </div>
 {/if}
 
@@ -288,7 +296,8 @@
   <img
     src={activeSrc}
     alt="Floor Plan"
-    class="floor-plans-static-image transition-opacity duration-300 {isLoaded ? 'opacity-100' : 'opacity-0'}"
+    class="floor-plans-static-image transition-opacity duration-300 mx-auto {isLoaded ? 'opacity-100' : 'opacity-0'}"
+    style="width: auto; height: 100vh; max-width: 100%; max-height: 100vh; object-fit: contain;"
     on:load={() => { isLoaded = true; }}
     on:error={() => { isLoaded = true; }}
     use:zoomable
@@ -318,23 +327,22 @@
 
   .left-panel-wrapper {
     position: fixed;
-    top: 50%;
-    right: 20px;
-    left: auto;
-    transform: translateY(-50%);
+    bottom: 20px;
+    left: 20px;
     z-index: 2000000001;
     max-height: 90vh;
-    width: 250px;
+    width: 200px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     .left-panel-wrapper {
-      top: 50%;
-      right: 10px;
-      left: auto;
+      bottom: 75px;
+      top: auto;
+      left: 10px;
+      right: auto;
       width: calc(100% - 20px);
-      max-width: 160px;
-      transform: translateY(-50%);
+      max-width: 150px;
+      transform: none;
       max-height: 80vh;
     }
 
