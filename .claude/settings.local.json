@@ -5,7 +5,9 @@
       "Bash(git remote *)",
       "Bash(git mv *)",
       "Bash(npm run *)",
-      "Bash(npm install *)"
+      "Bash(npm install *)",
+      "Bash(grep *)",
+      "Bash(npx svelte-check *)"
     ]
   }
 }

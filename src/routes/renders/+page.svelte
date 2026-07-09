@@ -72,6 +72,26 @@
   let isLoaded = true;
   let activeSrc = "";
   let prevSrc = "";
+  let imgEl;
+
+  const SELECTED_RENDER_KEY = "renders-selected";
+
+  const getSavedRender = () => {
+    try {
+      const saved = localStorage.getItem(SELECTED_RENDER_KEY);
+      return saved && amenityImages[saved] ? saved : null;
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const saveRender = (id) => {
+    try {
+      localStorage.setItem(SELECTED_RENDER_KEY, id);
+    } catch (e) {
+      // storage unavailable (private mode / iframe restrictions)
+    }
+  };
 
   $: displaySrc = $currentImage || amenityImages[amenitiesList[0].id];
   $: {
@@ -83,7 +103,8 @@
   }
 
   onMount(() => {
-    $hotspotName = amenitiesList[0].id;
+    // Restore the last selected render after a refresh, else start on the 1st
+    $hotspotName = getSavedRender() || amenitiesList[0].id;
     console.log("Static images mode enabled");
 
     // Subscribe to hotspot changes to update the displayed image
@@ -93,6 +114,7 @@
         const imagePath = amenityImages[changedHotspot];
         if (imagePath) {
           currentImage.set(imagePath);
+          saveRender(changedHotspot);
           console.log("Displaying image:", imagePath);
         }
       }
@@ -102,6 +124,13 @@
     const initialImage = amenityImages[$hotspotName];
     if (initialImage) {
       currentImage.set(initialImage);
+    }
+
+    // On a hard refresh the prerendered <img> may finish loading before
+    // hydration attaches on:load, so the event is missed and the image
+    // stays at opacity-0 — check .complete to recover.
+    if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+      isLoaded = true;
     }
   });
 
@@ -178,6 +207,7 @@
   {/if}
 
   <img
+    bind:this={imgEl}
     src={activeSrc}
     alt="Amenity"
     class="amenities-static-image transition-opacity duration-300 {isLoaded ? 'opacity-100' : 'opacity-0'}"

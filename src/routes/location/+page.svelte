@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import { zoomable } from "$lib/zoomable.js";
   // Placeholder for location image source. Feel free to update this URL.
   let locationImg =
@@ -7,6 +8,7 @@
   let isLoaded = true;
   let activeSrc = "";
   let prevSrc = "";
+  let imgEl;
   $: {
     if (locationImg && locationImg !== activeSrc) {
       prevSrc = activeSrc;
@@ -14,6 +16,15 @@
       isLoaded = false;
     }
   }
+
+  onMount(() => {
+    // On a hard refresh the prerendered <img> may finish loading before
+    // hydration attaches on:load, so the event is missed and the image
+    // stays at opacity-0 — check .complete to recover.
+    if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+      isLoaded = true;
+    }
+  });
 </script>
 
 <svelte:head>
@@ -31,6 +42,7 @@
 
   {#if activeSrc}
     <img
+      bind:this={imgEl}
       src={activeSrc}
       alt="Location"
       class="overview-static-image transition-opacity duration-300 {isLoaded ? 'opacity-100' : 'opacity-0'}"

@@ -21,6 +21,7 @@
   let isLoaded = true;
   let activeSrc = "";
   let prevSrc = "";
+  let imgEl;
   $: {
     if (masterPlanImg && masterPlanImg !== activeSrc) {
       prevSrc = activeSrc;
@@ -28,6 +29,15 @@
       isLoaded = false;
     }
   }
+
+  onMount(() => {
+    // On a hard refresh the prerendered <img> may finish loading before
+    // hydration attaches on:load, so the event is missed and the image
+    // stays at opacity-0 — check .complete to recover.
+    if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+      isLoaded = true;
+    }
+  });
 </script>
 
 <svelte:head>
@@ -45,6 +55,7 @@
 
   {#if activeSrc}
     <img
+      bind:this={imgEl}
       src={activeSrc}
       alt="Master Plan"
       class="overview-static-image transition-opacity duration-300 {isLoaded ? 'opacity-100' : 'opacity-0'}"
