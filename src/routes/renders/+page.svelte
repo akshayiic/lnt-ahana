@@ -20,52 +20,145 @@
   const amenityImages = {
     overview:
       "https://assets.vestate.io/lnt-ahana/amenities/main.png",
-    "Cabana Seating":
-      "https://assets.vestate.io/lnt-ahana/amenities/Cabana%20Seating.webp",
-    "Cabana Seating 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Cabana%20Seating%202.webp",
-    "Cabana Seating 3":
-      "https://assets.vestate.io/lnt-ahana/amenities/Cabana%20Seating%203.webp",
-    "Dropoff Area":
-      "https://assets.vestate.io/lnt-ahana/amenities/Dropoff%20Area.webp",
-    "Kids Play Area":
-      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Play%20Area.webp",
-    "Kids Play Area 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Play%20Area%202.webp",
+       exterior2:
+      "https://assets.vestate.io/lnt-ahana/amenities/exterior2.webp",
+          exterior3:
+      "https://assets.vestate.io/lnt-ahana/amenities/exterior3.webp",
     "Main Entrance":
       "https://assets.vestate.io/lnt-ahana/amenities/Main%20Entrance.webp",
     "Main Entrance 2":
       "https://assets.vestate.io/lnt-ahana/amenities/Main%20Entrance%202.webp",
+    "Pavilion 1":
+      "https://assets.vestate.io/lnt-ahana/amenities/Cabana%20Seating.webp",
+    "Pavilion 2":
+      "https://assets.vestate.io/lnt-ahana/amenities/Cabana%20Seating%202.webp",
+    "Pavilion 3":
+      "https://assets.vestate.io/lnt-ahana/amenities/Cabana%20Seating%203.webp",
+    "Community Lawn":
+      "https://assets.vestate.io/lnt-ahana/amenities/Community%20Lawn.webp",
+    "Dropoff":
+      "https://assets.vestate.io/lnt-ahana/amenities/Dropoff%202.webp",
+    "Dropoff 2":
+      "https://assets.vestate.io/lnt-ahana/amenities/Dropoff%202.webp",
+    "Kids Play Area":
+      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Play%20Area%202.webp",
+    "Multipurpose Court":
+      "https://assets.vestate.io/lnt-ahana/amenities/Multipurpose%20Court.webp",
     "Pool Deck":
       "https://assets.vestate.io/lnt-ahana/amenities/Pool%20Deck.webp",
+    "Swimming Pool":
+      "https://assets.vestate.io/lnt-ahana/amenities/Swimming%20Pool%201.webp",
     "Retail Area":
       "https://assets.vestate.io/lnt-ahana/amenities/Retail%20Area.webp",
     "Senior Citizen Seating":
       "https://assets.vestate.io/lnt-ahana/amenities/Senior%20Citizen%20Seating.webp",
-    "Sports Court":
-      "https://assets.vestate.io/lnt-ahana/amenities/Sports%20Court.webp",
-    "Swimming Pool 1":
-      "https://assets.vestate.io/lnt-ahana/amenities/Swimming%20Pool%201.webp",
-    "Tower A Dropoff":
-      "https://assets.vestate.io/lnt-ahana/amenities/Tower%20A%20Dropoff.webp",
+    // Interior Amenities
+    "Arcade Room":
+      "https://assets.vestate.io/lnt-ahana/amenities/Arcade%20Room%201.webp",
+    "Arcade Room 2":
+      "https://assets.vestate.io/lnt-ahana/amenities/Arcade%20Room%202.webp",
+    "Arcade Room 3":
+      "https://assets.vestate.io/lnt-ahana/amenities/Arcade%20Room%203.webp",
+    "Co-Working Space":
+      "https://assets.vestate.io/lnt-ahana/amenities/Co-Working%20Space.webp",
+    "Gym":
+      "https://assets.vestate.io/lnt-ahana/amenities/Gym%201.webp",
+    "Gym 2":
+      "https://assets.vestate.io/lnt-ahana/amenities/Gym%202.webp",
+    "Gym 3":
+      "https://assets.vestate.io/lnt-ahana/amenities/Gym%203.webp",
+    "Gym 4":
+      "https://assets.vestate.io/lnt-ahana/amenities/Gym%204.webp",
+    "Health Cafe":
+      "https://assets.vestate.io/lnt-ahana/amenities/Health%20Cafe.webp",
+    "Kids Digital Room":
+      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Digital%20Room.webp",
+    "Kids Digital Room 2":
+      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Digital%20Room%202.webp",
+    "Kids Digital Room 3":
+      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Digital%20Room%203.webp",
+    "Meeting Rooms":
+      "https://assets.vestate.io/lnt-ahana/amenities/Meeting%20Rooms.webp",
+    "Multipurpose Hall":
+      "https://assets.vestate.io/lnt-ahana/amenities/Multipurpose%20Hall.webp",
+    "Pilate Room":
+      "https://assets.vestate.io/lnt-ahana/amenities/Pilate%20Room.webp",
+    "Reception Lobby":
+      "https://assets.vestate.io/lnt-ahana/amenities/Reception%20Lobby.webp",
+    "Senior Citizen Area":
+      "https://assets.vestate.io/lnt-ahana/amenities/Senior%20Citizen%20Area.webp",
+    "Senior Citizen Area 2":
+      "https://assets.vestate.io/lnt-ahana/amenities/Senior%20Citizen%20Area%202.webp",
+    "Sports Cafe":
+      "https://assets.vestate.io/lnt-ahana/amenities/Sports%20Cafe.webp",
+    "Sports Cafe 2":
+      "https://assets.vestate.io/lnt-ahana/amenities/Sports%20Cafe%202.webp",
+    "Yoga Room":
+      "https://assets.vestate.io/lnt-ahana/amenities/Yoga%20Room.webp",
+      "Community Lawn":
+       "https://assets.vestate.io/lnt-ahana/amenities/Community%20Lawn.webp",
   };
 
-  // Simple flat list of amenities
-  const amenitiesList = [
-    { id: "overview", label: "L&T Ahana" },
-    { id: "Main Entrance", label: "Main Entrance 1" },
-    { id: "Tower A Dropoff", label: "Tower A Dropoff" },
-    { id: "Dropoff Area", label: "Dropoff Area" },
-    { id: "Retail Area", label: "Retail Area" },
-    { id: "Swimming Pool 1", label: "Swimming Pool" },
-    { id: "Pool Deck", label: "Pool Deck" },
-    { id: "Kids Play Area", label: "Kids Play Area 1" },
-    { id: "Kids Play Area 2", label: "Kids Play Area 2" },
-    { id: "Cabana Seating", label: "Cabana Seating 1" },
-    { id: "Cabana Seating 2", label: "Cabana Seating 2" },
-    { id: "Cabana Seating 3", label: "Cabana Seating 3" },
-    { id: "Senior Citizen Seating", label: "Senior Citizen Seating" },
-    { id: "Sports Court", label: "Sports Court" },
+  // Categories with expandable sections
+  let amenityCategories = [
+    {
+      id: "exterior",
+      name: "Exterior",
+      expanded: true,
+      items: [
+        { id: "overview", label: "L&T Ahana" },
+           { id: "exterior3", label: "Exterior 2" },
+      ]
+    },
+    {
+      id: "landscape",
+      name: "Landscape Amenities",
+      expanded: true,
+      items: [
+               { id: "exterior2", label: "Main Entrance" },
+        { id: "Main Entrance 2", label: "Main Entrance 2" },
+        { id: "Community Lawn", label: "Community Lawn" },
+        { id: "Pavilion 1", label: "Pavilion 1" },
+        { id: "Pavilion 2", label: "Pavilion 2" },
+        { id: "Pavilion 3", label: "Pavilion 3" },
+          { id: "Dropoff", label: "Dropoff" },
+        { id: "Multipurpose Court", label: "Multipurpose Court" },
+        { id: "Kids Play Area", label: "Kids Play Area" },
+        { id: "Swimming Pool", label: "Swimming Pool" },
+        { id: "Pool Deck", label: "Pool Deck" },
+        { id: "Senior Citizen Seating", label: "Senior Citizen Seating" },
+        { id: "Retail Area", label: "Retail Area" },
+      ]
+    },
+    {
+      id: "interior-amenities",
+      name: "Interior Amenities",
+      expanded: false,
+      items: [
+        { id: "Reception Lobby", label: "Reception Lobby" },
+        { id: "Arcade Room", label: "Arcade Room 1" },
+        { id: "Arcade Room 2", label: "Arcade Room 2" },
+        { id: "Arcade Room 3", label: "Arcade Room 3" },
+            { id: "Community Lawn", label: "Community Lawn" },
+        { id: "Gym", label: "Gym 1" },
+        { id: "Gym 2", label: "Gym 2" },
+        { id: "Gym 3", label: "Gym 3" },
+        { id: "Gym 4", label: "Gym 4" },
+        { id: "Yoga Room", label: "Yoga Room" },
+        { id: "Pilate Room", label: "Pilate Room" },
+        { id: "Co-Working Space", label: "Co-Working Space" },
+        { id: "Meeting Rooms", label: "Meeting Rooms" },
+        { id: "Multipurpose Hall", label: "Multipurpose Hall" },
+        { id: "Kids Digital Room", label: "Kids Digital Room 1" },
+        { id: "Kids Digital Room 2", label: "Kids Digital Room 2" },
+        { id: "Kids Digital Room 3", label: "Kids Digital Room 3" },
+        { id: "Senior Citizen Area", label: "Senior Citizen Area 1" },
+        { id: "Senior Citizen Area 2", label: "Senior Citizen Area 2" },
+        { id: "Sports Cafe", label: "Sports Cafe 1" },
+        { id: "Sports Cafe 2", label: "Sports Cafe 2" },
+        { id: "Health Cafe", label: "Health Cafe" },
+      ]
+    },
   ];
 
   let currentImage = writable();
@@ -73,6 +166,27 @@
   let activeSrc = "";
   let prevSrc = "";
   let imgEl;
+
+  // Helper function to get all items as flat list
+  const getAllItems = () => {
+    return amenityCategories.flatMap(cat => cat.items);
+  };
+
+  // Toggle category expansion - only one can be open at a time
+  const toggleCategory = (categoryId) => {
+    const category = amenityCategories.find(c => c.id === categoryId);
+    if (category) {
+      // Close all other categories
+      amenityCategories.forEach(cat => {
+        if (cat.id !== categoryId) {
+          cat.expanded = false;
+        }
+      });
+      // Toggle the clicked category
+      category.expanded = !category.expanded;
+      amenityCategories = amenityCategories; // Trigger reactivity
+    }
+  };
 
   const SELECTED_RENDER_KEY = "renders-selected";
 
@@ -93,7 +207,7 @@
     }
   };
 
-  $: displaySrc = $currentImage || amenityImages[amenitiesList[0].id];
+  $: displaySrc = $currentImage || amenityImages[getAllItems()[0]?.id];
   $: {
     if (displaySrc && displaySrc !== activeSrc) {
       prevSrc = activeSrc;
@@ -104,7 +218,8 @@
 
   onMount(() => {
     // Restore the last selected render after a refresh, else start on the 1st
-    $hotspotName = getSavedRender() || amenitiesList[0].id;
+    const allItems = getAllItems();
+    $hotspotName = getSavedRender() || allItems[0].id;
     console.log("Static images mode enabled");
 
     // Subscribe to hotspot changes to update the displayed image
@@ -177,19 +292,53 @@
 
       <div class={!$isAmenitiesMinimized ? "block" : "hidden"}>
         <div class="pt-3">
-          <div class="inner-btn-group">
-            {#each amenitiesList as amenity}
+          {#each amenityCategories as category}
+            <div class="category-section">
               <button
-                class={$hotspotName == amenity.id
-                  ? "active inner-modal-btn whitespace-normal text-left"
-                  : "inner-modal-btn whitespace-normal text-left"}
-                id={amenity.id + "-am"}
-                on:click={() => ($hotspotName = amenity.id)}
+                class="category-header flex items-center justify-between w-full py-2 px-3 text-left font-semibold text-sm"
+                on:click={() => toggleCategory(category.id)}
               >
-                {amenity.label}
+                <span>{category.name}</span>
+                <svg
+                  class="chevron {category.expanded ? 'rotate-0' : 'rotate-[-90deg]'}"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 4.5L6 8.5L10 4.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
               </button>
-            {/each}
-          </div>
+              {#if category.expanded}
+                <div class="inner-btn-group">
+                  {#if category.items.length > 0}
+                    {#each category.items as amenity}
+                      <button
+                        class={$hotspotName == amenity.id
+                          ? "active inner-modal-btn whitespace-normal text-left"
+                          : "inner-modal-btn whitespace-normal text-left"}
+                        id={amenity.id + "-am"}
+                        on:click={() => ($hotspotName = amenity.id)}
+                      >
+                        {amenity.label}
+                      </button>
+                    {/each}
+                  {:else}
+                    <div class="px-3 py-2 text-xs text-gray-400 italic">
+                      No items
+                    </div>
+                  {/if}
+                </div>
+              {/if}
+            </div>
+          {/each}
         </div>
       </div>
     </div>
@@ -235,7 +384,7 @@
   .amenities-static-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .left-panel-wrapper {
@@ -245,6 +394,25 @@
     z-index: 2000000001;
     max-height: 90vh;
     width: 250px;
+  }
+
+  .category-section {
+    margin-bottom: 0.5rem;
+  }
+
+  .category-header {
+    background: rgba(99, 10, 56, 0.1);
+    color: #630a38;
+    border-radius: 0.375rem;
+    transition: background 0.2s;
+  }
+
+  .category-header:hover {
+    background: rgba(99, 10, 56, 0.15);
+  }
+
+  .chevron {
+    transition: transform 0.2s ease;
   }
 
   @media (max-width: 1080px) {

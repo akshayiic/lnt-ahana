@@ -316,7 +316,7 @@
                 fill="#630a38"
               />
             </svg>
-            Renders
+            Project Overview
           </button>
         </div>
         <div class="inner-btn-wrapper">
