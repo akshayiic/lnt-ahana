@@ -21,7 +21,7 @@
     overview:
       "https://assets.vestate.io/lnt-ahana/amenities/main.png",
        exterior2:
-      "https://assets.vestate.io/lnt-ahana/amenities/exterior2.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/main_ent.webp",
           exterior3:
       "https://assets.vestate.io/lnt-ahana/amenities/exterior3.webp",
     "Main Entrance":
@@ -97,6 +97,72 @@
       "https://assets.vestate.io/lnt-ahana/amenities/Yoga%20Room.webp",
       "Community Lawn":
        "https://assets.vestate.io/lnt-ahana/amenities/Community%20Lawn.webp",
+
+    // Interior Units - 3BHK
+    "3BHK Balcony":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Balcony.webp",
+    "3BHK Bedroom 2":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Bedroom%202.webp",
+    "3BHK Bedroom 3":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Bedroom%203.webp",
+    "3BHK Common Washroom":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Common%20Washroom.webp",
+    "3BHK Dining":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Dining.webp",
+    "3BHK Foyer":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Foyer.webp",
+    "3BHK Kitchen":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Kitchen.webp",
+    "3BHK Living":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Lviign%20.webp",
+    "3BHK Master Balcony":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Master%20Balcony.webp",
+    "3BHK Master Bedroom":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Master%20Bedroom.webp",
+    "3BHK Master Washroom":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Master%20Washroom.webp",
+    "3BHK Utility":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Utility.webp",
+    "3BHK Washroom 2":
+      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Washroom%202.webp",
+
+    // Interior Units - 4BHK
+    "4BHK Balcony":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Balcony.webp",
+    "4BHK Balcony 2":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Balcony%202.webp",
+    "4BHK Bedroom 3":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Bedroom%203.webp",
+    "4BHK Bedroom 4":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Bedroom%204.webp",
+    "4BHK Common Washroom":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Common%20Washroom.webp",
+    "4BHK Dining":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Dining.webp",
+    "4BHK Foyer":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Foyer.webp",
+    "4BHK Kitchen":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Kitchen.webp",
+    "4BHK Living":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Living.webp",
+    "4BHK Master Balcony 1":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Master%20Balcony%201.webp",
+    "4BHK Master Bedroom 1":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Master%20Bedoom%201.webp",
+    "4BHK Master Bedroom 2":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Master%20Bedroom%202.webp",
+    "4BHK Master Washroom":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Master%20Washroom%20.webp",
+    "4BHK Utility":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Utility.webp",
+    "4BHK Wardrobe 1":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Wardrobe%201.webp",
+    "4BHK Wardrobe 2":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Wardrobe%202.webp",
+    "4BHK Washroom 2":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Washroom%202.webp",
+    "4BHK Washroom 4":
+      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Washroom%204.webp",
   };
 
   // Categories with expandable sections
@@ -106,8 +172,8 @@
       name: "Exterior",
       expanded: true,
       items: [
-        { id: "overview", label: "L&T Ahana" },
-           { id: "exterior3", label: "Exterior 2" },
+        { id: "overview", label: "Side Elevation" },
+           { id: "exterior3", label: "Front Elevation" },
       ]
     },
     {
@@ -116,7 +182,6 @@
       expanded: true,
       items: [
                { id: "exterior2", label: "Main Entrance" },
-        { id: "Main Entrance 2", label: "Main Entrance 2" },
         { id: "Community Lawn", label: "Community Lawn" },
         { id: "Pavilion 1", label: "Pavilion 1" },
         { id: "Pavilion 2", label: "Pavilion 2" },
@@ -139,7 +204,6 @@
         { id: "Arcade Room", label: "Arcade Room 1" },
         { id: "Arcade Room 2", label: "Arcade Room 2" },
         { id: "Arcade Room 3", label: "Arcade Room 3" },
-            { id: "Community Lawn", label: "Community Lawn" },
         { id: "Gym", label: "Gym 1" },
         { id: "Gym 2", label: "Gym 2" },
         { id: "Gym 3", label: "Gym 3" },
@@ -159,6 +223,58 @@
         { id: "Health Cafe", label: "Health Cafe" },
       ]
     },
+    {
+      id: "interior-units",
+      name: "Interior Units",
+      expanded: false,
+      subcategories: [
+        {
+          id: "3bhk",
+          name: "3BHK",
+          expanded: true,
+          items: [
+            { id: "3BHK Balcony", label: "Balcony" },
+            { id: "3BHK Bedroom 2", label: "Bedroom 2" },
+            { id: "3BHK Bedroom 3", label: "Bedroom 3" },
+            { id: "3BHK Common Washroom", label: "Common Washroom" },
+            { id: "3BHK Dining", label: "Dining" },
+            { id: "3BHK Foyer", label: "Foyer" },
+            { id: "3BHK Kitchen", label: "Kitchen" },
+            { id: "3BHK Living", label: "Living" },
+            { id: "3BHK Master Balcony", label: "Master Balcony" },
+            { id: "3BHK Master Bedroom", label: "Master Bedroom" },
+            { id: "3BHK Master Washroom", label: "Master Washroom" },
+            { id: "3BHK Utility", label: "Utility" },
+            { id: "3BHK Washroom 2", label: "Washroom 2" },
+          ]
+        },
+        {
+          id: "4bhk",
+          name: "4BHK",
+          expanded: false,
+          items: [
+            { id: "4BHK Balcony", label: "Balcony" },
+            { id: "4BHK Balcony 2", label: "Balcony 2" },
+            { id: "4BHK Bedroom 3", label: "Bedroom 3" },
+            { id: "4BHK Bedroom 4", label: "Bedroom 4" },
+            { id: "4BHK Common Washroom", label: "Common Washroom" },
+            { id: "4BHK Dining", label: "Dining" },
+            { id: "4BHK Foyer", label: "Foyer" },
+            { id: "4BHK Kitchen", label: "Kitchen" },
+            { id: "4BHK Living", label: "Living" },
+            { id: "4BHK Master Balcony 1", label: "Master Balcony 1" },
+            { id: "4BHK Master Bedroom 1", label: "Master Bedroom 1" },
+            { id: "4BHK Master Bedroom 2", label: "Master Bedroom 2" },
+            { id: "4BHK Master Washroom", label: "Master Washroom" },
+            { id: "4BHK Utility", label: "Utility" },
+            { id: "4BHK Wardrobe 1", label: "Wardrobe 1" },
+            { id: "4BHK Wardrobe 2", label: "Wardrobe 2" },
+            { id: "4BHK Washroom 2", label: "Washroom 2" },
+            { id: "4BHK Washroom 4", label: "Washroom 4" },
+          ]
+        }
+      ]
+    },
   ];
 
   let currentImage = writable();
@@ -169,7 +285,14 @@
 
   // Helper function to get all items as flat list
   const getAllItems = () => {
-    return amenityCategories.flatMap(cat => cat.items);
+    return amenityCategories.flatMap(cat => {
+      if (cat.items && cat.items.length > 0) {
+        return cat.items;
+      } else if (cat.subcategories && cat.subcategories.length > 0) {
+        return cat.subcategories.flatMap(sub => sub.items || []);
+      }
+      return [];
+    });
   };
 
   // Toggle category expansion - only one can be open at a time
@@ -185,6 +308,25 @@
       // Toggle the clicked category
       category.expanded = !category.expanded;
       amenityCategories = amenityCategories; // Trigger reactivity
+    }
+  };
+
+  // Toggle subcategory expansion within a category
+  const toggleSubcategory = (categoryId, subcategoryId) => {
+    const category = amenityCategories.find(c => c.id === categoryId);
+    if (category && category.subcategories) {
+      const subcategory = category.subcategories.find(sub => sub.id === subcategoryId);
+      if (subcategory) {
+        // Close all other subcategories within the same category
+        category.subcategories.forEach(sub => {
+          if (sub.id !== subcategoryId) {
+            sub.expanded = false;
+          }
+        });
+        // Toggle the clicked subcategory
+        subcategory.expanded = !subcategory.expanded;
+        amenityCategories = amenityCategories; // Trigger reactivity
+      }
     }
   };
 
@@ -318,7 +460,7 @@
               </button>
               {#if category.expanded}
                 <div class="inner-btn-group">
-                  {#if category.items.length > 0}
+                  {#if category.items && category.items.length > 0}
                     {#each category.items as amenity}
                       <button
                         class={$hotspotName == amenity.id
@@ -329,6 +471,48 @@
                       >
                         {amenity.label}
                       </button>
+                    {/each}
+                  {:else if category.subcategories && category.subcategories.length > 0}
+                    {#each category.subcategories as subcategory}
+                      <div class="subcategory-section">
+                        <button
+                          class="subcategory-header flex items-center justify-between w-full py-1.5 px-2 text-left font-medium text-xs text-gray-600"
+                          on:click={() => toggleSubcategory(category.id, subcategory.id)}
+                        >
+                          <span>{subcategory.name}</span>
+                          <svg
+                            class="chevron {subcategory.expanded ? 'rotate-0' : 'rotate-[-90deg]'}"
+                            width="10"
+                            height="10"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M2 4.5L6 8.5L10 4.5"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                        {#if subcategory.expanded}
+                          <div class="inner-btn-group ml-2">
+                            {#each subcategory.items as amenity}
+                              <button
+                                class={$hotspotName == amenity.id
+                                  ? "active inner-modal-btn whitespace-normal text-left"
+                                  : "inner-modal-btn whitespace-normal text-left"}
+                                id={amenity.id + "-am"}
+                                on:click={() => ($hotspotName = amenity.id)}
+                              >
+                                {amenity.label}
+                              </button>
+                            {/each}
+                          </div>
+                        {/if}
+                      </div>
                     {/each}
                   {:else}
                     <div class="px-3 py-2 text-xs text-gray-400 italic">
@@ -409,6 +593,31 @@
 
   .category-header:hover {
     background: rgba(99, 10, 56, 0.15);
+  }
+
+  .subcategory-section {
+    margin-bottom: 0.25rem;
+  }
+
+  .subcategory-header {
+    background: rgba(99, 10, 56, 0.05);
+    color: #630a38;
+    border-radius: 0.25rem;
+    transition: background 0.2s;
+    margin-top: 0.25rem;
+  }
+
+  .subcategory-header:hover {
+    background: rgba(99, 10, 56, 0.1);
+  }
+
+  .inner-btn-group {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .inner-btn-group::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
 
   .chevron {
