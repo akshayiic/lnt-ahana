@@ -182,17 +182,23 @@
       expanded: true,
       items: [
                { id: "exterior2", label: "Main Entrance" },
-        { id: "Community Lawn", label: "Community Lawn" },
+                { id: "Retail Area", label: "Retail Area" },
+                         { id: "Dropoff", label: "Dropoff" },
+                           { id: "Swimming Pool", label: "Swimming Pool" },
+                               { id: "Pool Deck", label: "Pool Deck" },
+
         { id: "Pavilion 1", label: "Pavilion 1" },
         { id: "Pavilion 2", label: "Pavilion 2" },
         { id: "Pavilion 3", label: "Pavilion 3" },
-          { id: "Dropoff", label: "Dropoff" },
-        { id: "Multipurpose Court", label: "Multipurpose Court" },
-        { id: "Kids Play Area", label: "Kids Play Area" },
-        { id: "Swimming Pool", label: "Swimming Pool" },
-        { id: "Pool Deck", label: "Pool Deck" },
+ 
+        
         { id: "Senior Citizen Seating", label: "Senior Citizen Seating" },
-        { id: "Retail Area", label: "Retail Area" },
+        { id: "Community Lawn", label: "Community Lawn" },
+        { id: "Kids Play Area", label: "Kids Play Area" },
+        { id: "Multipurpose Court", label: "Multipurpose Court" },
+      
+
+       
       ]
     },
     {
@@ -233,19 +239,19 @@
           name: "3BHK",
           expanded: true,
           items: [
-            { id: "3BHK Balcony", label: "Balcony" },
-            { id: "3BHK Bedroom 2", label: "Bedroom 2" },
-            { id: "3BHK Bedroom 3", label: "Bedroom 3" },
-            { id: "3BHK Common Washroom", label: "Common Washroom" },
-            { id: "3BHK Dining", label: "Dining" },
             { id: "3BHK Foyer", label: "Foyer" },
-            { id: "3BHK Kitchen", label: "Kitchen" },
             { id: "3BHK Living", label: "Living" },
-            { id: "3BHK Master Balcony", label: "Master Balcony" },
+            { id: "3BHK Dining", label: "Dining" },
+            { id: "3BHK Balcony", label: "Balcony" },
+            { id: "3BHK Kitchen", label: "Kitchen" },
             { id: "3BHK Master Bedroom", label: "Master Bedroom" },
+            { id: "3BHK Master Balcony", label: "Master Balcony" },
             { id: "3BHK Master Washroom", label: "Master Washroom" },
-            { id: "3BHK Utility", label: "Utility" },
+            { id: "3BHK Bedroom 2", label: "Bedroom 2" },
             { id: "3BHK Washroom 2", label: "Washroom 2" },
+            { id: "3BHK Bedroom 3", label: "Bedroom 3" },
+            { id: "3BHK Utility", label: "Utility" },
+            { id: "3BHK Common Washroom", label: "Common Washroom" },
           ]
         },
         {
@@ -253,24 +259,24 @@
           name: "4BHK",
           expanded: false,
           items: [
+            { id: "4BHK Foyer", label: "Foyer" },
+            { id: "4BHK Living", label: "Living" },
+            { id: "4BHK Dining", label: "Dining" },
             { id: "4BHK Balcony", label: "Balcony" },
+            { id: "4BHK Kitchen", label: "Kitchen" },
+            { id: "4BHK Master Bedroom 1", label: "Master Bedroom 1" },
+            { id: "4BHK Master Balcony 1", label: "Master Balcony 1" },
+            { id: "4BHK Master Washroom", label: "Master Washroom" },
+            { id: "4BHK Wardrobe 1", label: "Wardrobe 1" },
+            { id: "4BHK Master Bedroom 2", label: "Master Bedroom 2" },
             { id: "4BHK Balcony 2", label: "Balcony 2" },
+            { id: "4BHK Washroom 2", label: "Washroom 2" },
+            { id: "4BHK Wardrobe 2", label: "Wardrobe 2" },
             { id: "4BHK Bedroom 3", label: "Bedroom 3" },
             { id: "4BHK Bedroom 4", label: "Bedroom 4" },
-            { id: "4BHK Common Washroom", label: "Common Washroom" },
-            { id: "4BHK Dining", label: "Dining" },
-            { id: "4BHK Foyer", label: "Foyer" },
-            { id: "4BHK Kitchen", label: "Kitchen" },
-            { id: "4BHK Living", label: "Living" },
-            { id: "4BHK Master Balcony 1", label: "Master Balcony 1" },
-            { id: "4BHK Master Bedroom 1", label: "Master Bedroom 1" },
-            { id: "4BHK Master Bedroom 2", label: "Master Bedroom 2" },
-            { id: "4BHK Master Washroom", label: "Master Washroom" },
-            { id: "4BHK Utility", label: "Utility" },
-            { id: "4BHK Wardrobe 1", label: "Wardrobe 1" },
-            { id: "4BHK Wardrobe 2", label: "Wardrobe 2" },
-            { id: "4BHK Washroom 2", label: "Washroom 2" },
             { id: "4BHK Washroom 4", label: "Washroom 4" },
+            { id: "4BHK Utility", label: "Utility" },
+            { id: "4BHK Common Washroom", label: "Common Washroom" },
           ]
         }
       ]
