@@ -78,6 +78,7 @@
         <button
           id="v-start-btn"
           on:click={() => {
+            localStorage.setItem("renders-selected", "exterior3");
             const isFirstLoad = !localStorage.getItem("first_load_redirected");
             if (isFirstLoad) {
               localStorage.setItem("first_load_redirected", "true");

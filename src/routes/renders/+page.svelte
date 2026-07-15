@@ -35,15 +35,13 @@
     "Pavilion 3":
       "https://assets.vestate.io/lnt-ahana/amenities/Cabana%20Seating%203.webp",
     "Community Lawn":
-      "https://assets.vestate.io/lnt-ahana/amenities/Community%20Lawn.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/community_lawn.webp",
     "Dropoff":
-      "https://assets.vestate.io/lnt-ahana/amenities/Dropoff%202.webp",
-    "Dropoff 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Dropoff%202.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/dropoff.webp",
     "Kids Play Area":
-      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Play%20Area%202.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/Jungle%20Room.webp",
     "Multipurpose Court":
-      "https://assets.vestate.io/lnt-ahana/amenities/Multipurpose%20Court.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/multipurp.webp",
     "Pool Deck":
       "https://assets.vestate.io/lnt-ahana/amenities/Pool%20Deck.webp",
     "Swimming Pool":
@@ -54,49 +52,37 @@
       "https://assets.vestate.io/lnt-ahana/amenities/Senior%20Citizen%20Seating.webp",
     // Interior Amenities
     "Arcade Room":
-      "https://assets.vestate.io/lnt-ahana/amenities/Arcade%20Room%201.webp",
-    "Arcade Room 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Arcade%20Room%202.webp",
-    "Arcade Room 3":
-      "https://assets.vestate.io/lnt-ahana/amenities/Arcade%20Room%203.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/arcade.webp",
     "Co-Working Space":
-      "https://assets.vestate.io/lnt-ahana/amenities/Co-Working%20Space.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/coworking.webp",
     "Gym":
-      "https://assets.vestate.io/lnt-ahana/amenities/Gym%201.webp",
-    "Gym 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Gym%202.webp",
-    "Gym 3":
-      "https://assets.vestate.io/lnt-ahana/amenities/Gym%203.webp",
-    "Gym 4":
-      "https://assets.vestate.io/lnt-ahana/amenities/Gym%204.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/Gym.webp",
     "Health Cafe":
-      "https://assets.vestate.io/lnt-ahana/amenities/Health%20Cafe.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/healthcafe.webp",
     "Kids Digital Room":
-      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Digital%20Room.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/kidsdigital.webp",
     "Kids Digital Room 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Digital%20Room%202.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/kidsdigital.webp",
     "Kids Digital Room 3":
-      "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Digital%20Room%203.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/kidsdigital.webp",
     "Meeting Rooms":
-      "https://assets.vestate.io/lnt-ahana/amenities/Meeting%20Rooms.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/meetingroom.webp",
     "Multipurpose Hall":
       "https://assets.vestate.io/lnt-ahana/amenities/Multipurpose%20Hall.webp",
     "Pilate Room":
-      "https://assets.vestate.io/lnt-ahana/amenities/Pilate%20Room.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/pilate.webp",
     "Reception Lobby":
-      "https://assets.vestate.io/lnt-ahana/amenities/Reception%20Lobby.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/Lobby%203.webp",
     "Senior Citizen Area":
-      "https://assets.vestate.io/lnt-ahana/amenities/Senior%20Citizen%20Area.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/senior.webp",
     "Senior Citizen Area 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Senior%20Citizen%20Area%202.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/senior.webp",
     "Sports Cafe":
-      "https://assets.vestate.io/lnt-ahana/amenities/Sports%20Cafe.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/sportscafe.webp",
     "Sports Cafe 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/Sports%20Cafe%202.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/sportscafe.webp",
     "Yoga Room":
-      "https://assets.vestate.io/lnt-ahana/amenities/Yoga%20Room.webp",
-      "Community Lawn":
-       "https://assets.vestate.io/lnt-ahana/amenities/Community%20Lawn.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/yoga.webp",
 
     // Interior Units - 3BHK
     "3BHK Balcony":
@@ -168,15 +154,6 @@
   // Categories with expandable sections
   let amenityCategories = [
     {
-      id: "exterior",
-      name: "Exterior",
-      expanded: true,
-      items: [
-        { id: "overview", label: "Side Elevation" },
-           { id: "exterior3", label: "Front Elevation" },
-      ]
-    },
-    {
       id: "landscape",
       name: "Landscape Amenities",
       expanded: true,
@@ -207,25 +184,16 @@
       expanded: false,
       items: [
         { id: "Reception Lobby", label: "Reception Lobby" },
-        { id: "Arcade Room", label: "Arcade Room 1" },
-        { id: "Arcade Room 2", label: "Arcade Room 2" },
-        { id: "Arcade Room 3", label: "Arcade Room 3" },
-        { id: "Gym", label: "Gym 1" },
-        { id: "Gym 2", label: "Gym 2" },
-        { id: "Gym 3", label: "Gym 3" },
-        { id: "Gym 4", label: "Gym 4" },
+        { id: "Arcade Room", label: "Arcade Room" },
+        { id: "Gym", label: "Gym" },
         { id: "Yoga Room", label: "Yoga Room" },
         { id: "Pilate Room", label: "Pilate Room" },
         { id: "Co-Working Space", label: "Co-Working Space" },
         { id: "Meeting Rooms", label: "Meeting Rooms" },
         { id: "Multipurpose Hall", label: "Multipurpose Hall" },
-        { id: "Kids Digital Room", label: "Kids Digital Room 1" },
-        { id: "Kids Digital Room 2", label: "Kids Digital Room 2" },
-        { id: "Kids Digital Room 3", label: "Kids Digital Room 3" },
-        { id: "Senior Citizen Area", label: "Senior Citizen Area 1" },
-        { id: "Senior Citizen Area 2", label: "Senior Citizen Area 2" },
-        { id: "Sports Cafe", label: "Sports Cafe 1" },
-        { id: "Sports Cafe 2", label: "Sports Cafe 2" },
+        { id: "Kids Digital Room", label: "Kids Digital Room " },
+        { id: "Senior Citizen Area", label: "Senior Citizen Area " },
+        { id: "Sports Cafe", label: "Sports Cafe" },
         { id: "Health Cafe", label: "Health Cafe" },
       ]
     },
@@ -355,7 +323,7 @@
     }
   };
 
-  $: displaySrc = $currentImage || amenityImages[getAllItems()[0]?.id];
+  $: displaySrc = $currentImage || amenityImages["exterior3"];
   $: {
     if (displaySrc && displaySrc !== activeSrc) {
       prevSrc = activeSrc;
@@ -367,7 +335,7 @@
   onMount(() => {
     // Restore the last selected render after a refresh, else start on the 1st
     const allItems = getAllItems();
-    $hotspotName = getSavedRender() || allItems[0].id;
+    $hotspotName = getSavedRender() || "exterior3";
     console.log("Static images mode enabled");
 
     // Subscribe to hotspot changes to update the displayed image
