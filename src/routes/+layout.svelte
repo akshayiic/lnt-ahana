@@ -293,7 +293,7 @@
       <div class="btn-group">
         <div class="inner-btn-wrapper">
           <button
-            class={$page.url.pathname === "/renders"
+            class={$page.url.pathname === "/project-overview"
               ? "transparent-btn active"
               : "transparent-btn"}
             id="amenities"
@@ -301,7 +301,7 @@
               show("amenities");
               UIPanel.set("loaded");
               hotspotName.set("amenities");
-              goto("/renders");
+              goto("/project-overview");
             }}
           >
             <svg

@@ -40,6 +40,8 @@
       "https://assets.vestate.io/lnt-ahana/amenities/dropoff.webp",
     "Kids Play Area":
       "https://assets.vestate.io/lnt-ahana/amenities/Jungle%20Room.webp",
+          "Kids Play Area 2":
+   "https://assets.vestate.io/lnt-ahana/amenities/Kids%20Play%20Area%202.webp",
     "Multipurpose Court":
       "https://assets.vestate.io/lnt-ahana/amenities/multipurp.webp",
     "Pool Deck":
@@ -163,6 +165,7 @@
                          { id: "Dropoff", label: "Dropoff" },
                            { id: "Swimming Pool", label: "Swimming Pool" },
                                { id: "Pool Deck", label: "Pool Deck" },
+                                  { id: "Kids Play Area 2", label: "Kids Play Area" },
 
         { id: "Pavilion 1", label: "Pavilion 1" },
         { id: "Pavilion 2", label: "Pavilion 2" },
@@ -171,7 +174,7 @@
         
         { id: "Senior Citizen Seating", label: "Senior Citizen Seating" },
         { id: "Community Lawn", label: "Community Lawn" },
-        { id: "Kids Play Area", label: "Kids Play Area" },
+     
         { id: "Multipurpose Court", label: "Multipurpose Court" },
       
 
@@ -192,9 +195,11 @@
         { id: "Meeting Rooms", label: "Meeting Rooms" },
         { id: "Multipurpose Hall", label: "Multipurpose Hall" },
         { id: "Kids Digital Room", label: "Kids Digital Room " },
+               { id: "Kids Play Area", label: "Jungle Room" },
         { id: "Senior Citizen Area", label: "Senior Citizen Area " },
         { id: "Sports Cafe", label: "Sports Cafe" },
         { id: "Health Cafe", label: "Health Cafe" },
+    
       ]
     },
     {
@@ -388,7 +393,7 @@
               fill="#630a38"
             />
           </svg>
-          Renders
+          Project Overview
         </div>
         <button
           on:click={() => {

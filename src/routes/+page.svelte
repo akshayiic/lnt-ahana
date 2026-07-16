@@ -82,9 +82,9 @@
             const isFirstLoad = !localStorage.getItem("first_load_redirected");
             if (isFirstLoad) {
               localStorage.setItem("first_load_redirected", "true");
-              goto("/renders");
+              goto("/project-overview");
             } else {
-              goto("/renders");
+              goto("/project-overview");
               UIPanel.set("sign-up");
               if (!(window.self !== window.top) && window.innerWidth < 1200) {
                 if (document.body.requestFullscreen) {
