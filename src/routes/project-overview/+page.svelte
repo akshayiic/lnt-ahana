@@ -82,7 +82,7 @@
     "Sports Cafe":
       "https://assets.vestate.io/lnt-ahana/amenities/sportscafe.webp",
     "Sports Cafe 2":
-      "https://assets.vestate.io/lnt-ahana/amenities/sportscafe.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/sports%20cafe%203.webp",
     "Yoga Room":
       "https://assets.vestate.io/lnt-ahana/amenities/yoga.webp",
 
@@ -197,7 +197,7 @@
         { id: "Kids Digital Room", label: "Kids Digital Room " },
                { id: "Kids Play Area", label: "Jungle Room" },
         { id: "Senior Citizen Area", label: "Senior Citizen Area " },
-        { id: "Sports Cafe", label: "Sports Cafe" },
+        { id: "Sports Cafe 2", label: "Sports Cafe" },
         { id: "Health Cafe", label: "Health Cafe" },
     
       ]
