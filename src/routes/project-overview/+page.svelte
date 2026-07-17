@@ -21,7 +21,7 @@
     overview:
       "https://assets.vestate.io/lnt-ahana/amenities/main.png",
        exterior2:
-      "https://assets.vestate.io/lnt-ahana/amenities/main_ent.webp",
+      "https://assets.vestate.io/lnt-ahana/amenities/mainent.webp",
           exterior3:
       "https://assets.vestate.io/lnt-ahana/amenities/exterior3.webp",
     "Main Entrance":
@@ -538,7 +538,7 @@
   .amenities-static-image {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .left-panel-wrapper {
