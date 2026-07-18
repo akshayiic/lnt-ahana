@@ -38,6 +38,8 @@
       "https://assets.vestate.io/lnt-ahana/amenities/community_lawn.webp",
     "Dropoff":
       "https://assets.vestate.io/lnt-ahana/amenities/dropoff.webp",
+    "Dropoff2":
+      "https://assets.vestate.io/lnt-ahana/newinterior/dropoff2.webp",
     "Kids Play Area":
       "https://assets.vestate.io/lnt-ahana/amenities/Jungle%20Room.webp",
           "Kids Play Area 2":
@@ -88,7 +90,7 @@
 
     // Interior Units - 3BHK
     "3BHK Balcony":
-      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Balcony.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/3BHK%20Balcony.webp",
     "3BHK Bedroom 2":
       "https://assets.vestate.io/lnt-ahana/interior/3bhk/Bedroom%202.webp",
     "3BHK Bedroom 3":
@@ -98,13 +100,13 @@
     "3BHK Dining":
       "https://assets.vestate.io/lnt-ahana/interior/3bhk/Dining.webp",
     "3BHK Foyer":
-      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Foyer.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/3BHK%20Foyer.webp",
     "3BHK Kitchen":
       "https://assets.vestate.io/lnt-ahana/interior/3bhk/Kitchen.webp",
     "3BHK Living":
-      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Living.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/3BHK%20Liivng.webp",
     "3BHK Master Bedroom":
-      "https://assets.vestate.io/lnt-ahana/interior/3bhk/Masterbedroom.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/3BHK%20Master%20Bedroom.webp",
     "3BHK Master Washroom":
       "https://assets.vestate.io/lnt-ahana/interior/3bhk/Master%20Washroom.webp",
     "3BHK Washroom 2":
@@ -112,13 +114,13 @@
 
     // Interior Units - 4BHK
     "4BHK Balcony":
-      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Balcony.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/4BhK%20Balcony.webp",
     "4BHK Bedroom 2":
       "https://assets.vestate.io/lnt-ahana/interior/4bhk/Bedroom%202.webp",
     "4BHK Bedroom 3":
       "https://assets.vestate.io/lnt-ahana/interior/4bhk/Bedroom%203.webp",
     "4BHK Bedroom 4":
-      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Bedroom%204.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/4BHK%20Bedroom%204.webp",
     "4BHK Common Washroom":
       "https://assets.vestate.io/lnt-ahana/interior/4bhk/Common%20Washroom.webp",
     "4BHK Dining Area":
@@ -128,9 +130,9 @@
     "4BHK Kitchen":
       "https://assets.vestate.io/lnt-ahana/interior/4bhk/Kitchen.webp",
     "4BHK Living Area":
-      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Living%20Area.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/4BHK%20Living.webp",
     "4BHK Master Balcony":
-      "https://assets.vestate.io/lnt-ahana/interior/4bhk/Master%20Balcony.webp",
+      "https://assets.vestate.io/lnt-ahana/newinterior/4BHK%20master%20balcony.webp",
     "4BHK Master Balcony 2":
       "https://assets.vestate.io/lnt-ahana/interior/4bhk/Master%20Balcony%202.webp",
     "4BHK Master Bedroom":
@@ -157,6 +159,7 @@
                { id: "exterior2", label: "Main Entrance" },
                 { id: "Retail Area", label: "Retail Area" },
                          { id: "Dropoff", label: "Dropoff" },
+                        //  { id: "Dropoff2", label: "Dropoff 2" },
                            { id: "Swimming Pool", label: "Swimming Pool" },
                                { id: "Pool Deck", label: "Pool Deck" },
                                   { id: "Kids Play Area 2", label: "Kids Play Area" },
@@ -231,15 +234,20 @@
             { id: "4BHK Kitchen", label: "Kitchen" },
             { id: "4BHK Master Bedroom", label: "Master Bedroom" },
             { id: "4BHK Master Balcony", label: "Master Balcony" },
-            { id: "4BHK Master Balcony 2", label: "Master Balcony 2" },
-            { id: "4BHK Wardrobe 1", label: "Wardrobe 1" },
+              { id: "4BHK Washroom 1", label: "Master Washroom" },
+                 { id: "4BHK Wardrobe 1", label: "Wardrobe 1" },
+                  { id: "4BHK Bedroom 2", label: "Bedroom 2" },
+            { id: "4BHK Master Balcony 2", label: " Balcony 2" },
+              { id: "4BHK Washroom 2", label: "Washroom 2" },
+         
             { id: "4BHK Wardrobe 2", label: "Wardrobe 2" },
-            { id: "4BHK Bedroom 2", label: "Bedroom 2" },
+           
             { id: "4BHK Bedroom 3", label: "Bedroom 3" },
+              { id: "4BHK Washroom 3", label: "Washroom 3" },
             { id: "4BHK Bedroom 4", label: "Bedroom 4" },
-            { id: "4BHK Washroom 1", label: "Washroom 1" },
-            { id: "4BHK Washroom 2", label: "Washroom 2" },
-            { id: "4BHK Washroom 3", label: "Washroom 3" },
+          
+          
+          
             { id: "4BHK Common Washroom", label: "Common Washroom" },
           ]
         }
