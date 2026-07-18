@@ -159,7 +159,7 @@
                { id: "exterior2", label: "Main Entrance" },
                 { id: "Retail Area", label: "Retail Area" },
                          { id: "Dropoff", label: "Dropoff" },
-                        //  { id: "Dropoff2", label: "Dropoff 2" },
+                         { id: "Dropoff2", label: "Dropoff 2" },
                            { id: "Swimming Pool", label: "Swimming Pool" },
                                { id: "Pool Deck", label: "Pool Deck" },
                                   { id: "Kids Play Area 2", label: "Kids Play Area" },
